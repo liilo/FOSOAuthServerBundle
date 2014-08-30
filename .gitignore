@@ -4,3 +4,6 @@ vendor/
 Propel/om/
 Propel/map/
 composer.lock
+/.settings
+/.buildpath
+/.project
