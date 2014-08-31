@@ -74,6 +74,17 @@ class FOSOAuthServerExtension extends Extension
                 ));
             }
         }
+        elseif ('dynamodb' === $config['db_driver']) {
+            if (null === $config['model_manager_name']) {
+                $container->setAlias('fos_oauth_server.document_manager', new Alias('cpliakas.dynamo-db-odm.document_manager', false));
+            } else {
+                $container->setAlias('fos_oauth_server.document_manager', new Alias(
+                    sprintf('cpliakas.%s_dynamo-db-odm.document_manager',
+                    $config['model_manager_name']),
+                    false
+                ));
+            }
+        }
 
         if (!empty($config['authorize'])) {
             $this->loadAuthorize($config['authorize'], $container, $loader);
