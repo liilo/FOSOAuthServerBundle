@@ -30,7 +30,7 @@
 		"doctrine/mongodb-odm" : "1.0.*@dev",
 		"doctrine/doctrine-bundle" : "~1.0",
 		"doctrine/orm" : ">=2.2,<2.5-dev",
-		"cpliakas/dynamo-db-odm": "*",
+		"cpliakas/dynamo-db-odm" : "*",
 		"aws/aws-sdk-php" : "2.*"
 	},
 	"suggest" : {
@@ -41,10 +41,10 @@
 	},
 	"autoload" : {
 		"psr-0" : {
-			"ChoZr\\FOSOAuthServerBundle" : ""
+			"FOS\\OAuthServerBundle" : ""
 		}
 	},
-	"target-dir" : "ChoZr/FOSOAuthServerBundle",
+	"target-dir" : "FOS/OAuthServerBundle",
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "1.4-dev"
